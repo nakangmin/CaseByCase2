@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    //<LinearLayout
+    android:id="@+id/mini"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginVertical="20dp"
+    android:background="@drawable/moreround"
+    android:orientation="horizontal"
+    android:paddingHorizontal="30dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/bicycle_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bicycle_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:hint="자전거 없음" />
+
+        <TextView
+            android:id="@+id/regist_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:hint="등록일" />
+
+        <Button
+            android:id="@+id/regist_cancle_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="자전거 해제하기" />
+    </LinearLayout>
+</LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mini"
+        app:layout_constraintVertical_bias="0">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/round"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/regist_image"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="100dp"
+                android:layout_weight="3"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            <EditText
+                android:id="@+id/edit_bicycle_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/regist_text"
+                android:ems="10"
+                android:hint="자전거 이름"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_model"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="모델명"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:id="@+id/edit_model"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/regist_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="연식"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:id="@+id/edit_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/regist_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="종류"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd" />
+
+                <EditText
+                    android:id="@+id/edit_category"
+                    android:inputType="textPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:background="@drawable/spinner"
+                    android:minHeight="48dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_care"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:text="정비 이력"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/bicycle_chain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="체인" />
+
+                <CheckBox
+                    android:id="@+id/bicycle_pedal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="페달" />
+
+                <CheckBox
+                    android:id="@+id/bicycle_tire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="타이어" />
+
+                <CheckBox
+                    android:id="@+id/bicycle_chair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="안장" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_care_other"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/regist_text"
+                android:ems="10"
+                android:hint="이외의 부품을 입력해주세요."
+                android:inputType="textPersonName"
+                android:textSize="15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/regist_button"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/regist_button"
+                android:text="자전거 등록"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

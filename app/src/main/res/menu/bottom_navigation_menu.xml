@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/registerBike"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:orderInCategory="200"
+        android:enabled="true"
+        android:title="등록"/>
+    <item
+        android:id="@+id/repairBike"
+        android:icon="@drawable/ic_repair"
+        android:orderInCategory="300"
+        android:enabled="true"
+        android:title="정비"/>
+    <item
+        android:id="@+id/MainBike"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:orderInCategory="100"
+        android:enabled="true"
+        android:checked="true"
+        android:title="메인"/>
+    <item
+        android:id="@+id/parkginBike"
+        android:icon="@drawable/ic_baseline_local_parking_24"
+        android:enabled="true"
+        android:orderInCategory="400"
+        android:title="주차"/>
+    <item
+        android:id="@+id/ridingModeBike"
+        android:icon="@drawable/ic_ridingmode"
+        android:enabled="true"
+        android:orderInCategory="500"
+        android:title="라이딩"/>
+
+</menu>

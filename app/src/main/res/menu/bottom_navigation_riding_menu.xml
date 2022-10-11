@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/recordRiding"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_baseline_record_24"
+        android:title="통계"/>
+    <item
+        android:id="@+id/ridingRecordRiding"
+        android:icon="@drawable/ic_baseline_moving_24"
+        android:orderInCategory="300"
+        android:title="주행기록"/>
+    <item
+        android:id="@+id/ridingMain"
+        android:icon="@drawable/ic_ridingmode"
+        android:orderInCategory="100"
+        android:title="라이딩"/>
+    <item
+        android:id="@+id/mapRiding"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:orderInCategory="400"
+        android:title="지도"/>
+
+    <item
+        android:id="@+id/mainReturn"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:orderInCategory="500"
+        android:title="메인"/>
+</menu>
