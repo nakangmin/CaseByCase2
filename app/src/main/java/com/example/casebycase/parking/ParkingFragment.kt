@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import com.example.casebycase.R
+import com.example.casebycase.databinding.FragmentParkingBinding
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 
-class ParkingFragment: Fragment(R.layout.fragment_parking) {
+class ParkingFragment: Fragment() {
     private var parkingBinding: FragmentParkingBinding?=null
     private val binding get() = parkingBinding!!
 
@@ -63,8 +64,8 @@ class ParkingFragment: Fragment(R.layout.fragment_parking) {
                 Log.d("Parking", response.toString())
                 response.body().let {
                     Log.d("Parking", it.toString())
-                    binding.hum.text = it?.MESSAGE?.get(hum)?.humi.toString()
-                    binding.temp.text = it?.MESSAGE?.get(tem)?.tem.toString()
+//                    binding.hum.text = it?.MESSAGE?.get(hum)?.humi.toString()
+//                    binding.temp.text = it?.MESSAGE?.get(tem)?.tem.toString()
                 }
 
             }
